@@ -14,6 +14,7 @@ import org.pisibp.demo.urlshortener.model.ShortUrl;
 import org.pisibp.demo.urlshortener.repository.ShortUrlRepository;
 import org.pisibp.demo.urlshortener.service.URLShortenerService;
 import org.pisibp.demo.urlshortener.util.UrlBase62Converter;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -39,13 +40,9 @@ public class URLShortenerServiceImpl implements URLShortenerService {
     @Override
     public URLShortenerResponse makeShortURL(@Valid URLShortenerRequest urlShortenerRequest) {
         log.info("Make short URL[input = {}]", urlShortenerRequest);
-//
-//        if (longUrl == null || longUrl.isBlank()) {
-//            throw ApiException.BAD_REQUEST_EXCEPTION;
-//        }
 
         final String longUrl = urlShortenerRequest.url();
-        UrlSafetyReport urlSafetyReport = urlCheckerClient.isUrlSafe(longUrl);
+        UrlSafetyReport urlSafetyReport = urlCheckerClient.checkUrlSafety(longUrl);
 
         final long id = idGenerator.getNext();
         final String shortenedUrlIdentifier = UrlBase62Converter.convert(id);
@@ -71,11 +68,10 @@ public class URLShortenerServiceImpl implements URLShortenerService {
     private ShortUrl insertOrGet(ShortUrl shortUrl) {
         try {
             return shortUrlRepository.save(shortUrl);
-        } catch (ConstraintViolationException e) {
+        } catch (DataIntegrityViolationException e) {
             log.warn("Short url[id = {}, long url = {}, short url = {}] is already stored.",
                     shortUrl.getId(), shortUrl.getLongUrl(), shortUrl.getShortUrl());
             return shortUrlRepository.findByLongUrl(shortUrl.getLongUrl());
         }
-
     }
 }

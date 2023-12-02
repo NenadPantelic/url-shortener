@@ -1,6 +1,6 @@
 package org.pisibp.demo.urlshortener.mapper;
 
-import org.pisibp.demo.urlshortener.config.UrlConfig;
+import org.pisibp.demo.urlshortener.properties.UrlConfigProperties;
 import org.pisibp.demo.urlshortener.dto.URLShortenerResponse;
 import org.pisibp.demo.urlshortener.dto.urlsafety.UrlSafetyReport;
 import org.springframework.stereotype.Component;
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class PublicUrlMapper {
 
-    private final UrlConfig urlConfig;
+    private final UrlConfigProperties urlConfig;
 
-    public PublicUrlMapper(UrlConfig urlConfig) {
+    public PublicUrlMapper(UrlConfigProperties urlConfig) {
         this.urlConfig = urlConfig;
     }
 

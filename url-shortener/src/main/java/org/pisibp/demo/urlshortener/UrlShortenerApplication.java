@@ -1,12 +1,12 @@
 package org.pisibp.demo.urlshortener;
 
-import org.pisibp.demo.urlshortener.config.UrlConfig;
+import org.pisibp.demo.urlshortener.properties.UrlConfigProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @EnableConfigurationProperties(value = {
-        UrlConfig.class
+        UrlConfigProperties.class
 })
 @SpringBootApplication
 public class UrlShortenerApplication {
