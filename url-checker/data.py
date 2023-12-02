@@ -18,7 +18,7 @@ class UrlSafetyReport:
     def to_dict(self):
         return {
             'url_safety_status': self.url_safety_status.name,
-            'syntax_is_correct': self.secure_connection.name,
+            'syntax_is_correct': self.syntax_is_correct.name,
             'secure_connection': self.secure_connection.name,
             'site_is_alive': self.site_is_alive.name
         }

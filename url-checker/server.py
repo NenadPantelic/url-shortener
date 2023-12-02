@@ -28,7 +28,7 @@ def _check_session(request_):
 
 def deserialize(payload):
     try:
-        return UrlSafetyRequest(payload)
+        return UrlSafetyRequest(payload.get('url'))
     except Exception as e:
         log.error(f'Could not deserialize the request {request} due to {e}')
         raise ApiException('Invalid body syntax', 422)
@@ -52,7 +52,7 @@ def context(deser_function, check_auth=True):
 @app.route(ENDPOINT_PATH, methods=['POST'])
 @context(deserialize)
 def check_url_safety(url_safety_request: UrlSafetyRequest):
-    log.info(f'Checking the safety of the {url_safety_request}')
+    log.info(f'Received a request to check the safety of the url - {url_safety_request}')
     return url_checker.check_url(url_safety_request.url).to_dict(), 200
 
 
