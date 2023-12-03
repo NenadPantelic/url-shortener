@@ -21,3 +21,4 @@ buildNumber.properties
 url-checker/venv
 url-checker/__pycache__
 url-checker/.idea
+url-checker/app.log
