@@ -1,34 +1,15 @@
-import socket
-import ssl
 from typing import List
+from urllib.parse import urlparse
 
-import certifi
 import requests
 
 from data import UrlSafetyReport, UrlSafetyStatus
 from logconfig import log
-from urllib.parse import urlparse
 
 
 class UrlChecker:
     def __init__(self):
         pass
-
-    @staticmethod
-    def _has_secure_connection(url: str) -> UrlSafetyStatus:
-        log.info(f'Checking whether the url {url} has secure connection.')
-
-        try:
-            context = ssl.create_default_context(cafile=certifi.where())
-
-            with socket.create_connection((url, 443)) as sock:
-                with context.wrap_socket(sock, server_hostname=url) as ssock:
-                    ssock.do_handshake()
-                    ssock.getpeercert()
-                    return UrlSafetyStatus.YES
-        except Exception as e:
-            log.warning(f'The {url} is not based on the secure SSL/TLS connection. Details: {e}.')
-            return UrlSafetyStatus.NO
 
     @staticmethod
     def _is_site_up(url: str) -> UrlSafetyStatus:
@@ -58,22 +39,20 @@ class UrlChecker:
         log.info(f'Checking the safety of the {url}')
 
         syntax_is_correct = UrlChecker._has_valid_syntax(url)
-        connection_is_secure = UrlChecker._has_secure_connection(url)
         site_is_up = UrlChecker._is_site_up(url)
         url_safety_status = UrlChecker._determine_url_safety_status(
-            [connection_is_secure, syntax_is_correct, site_is_up]
+            [syntax_is_correct, site_is_up]
         )
 
         log.info(f'Check url safety report:'
                  f'syntax is correct = {syntax_is_correct}, '
-                 f'secure connection = {connection_is_secure}, '
                  f'site is up = {site_is_up}')
 
         return UrlSafetyReport(
             url_safety_status,
             syntax_is_correct,
-            connection_is_secure,
-            site_is_up)
+            site_is_up
+        )
 
     @staticmethod
     def _determine_url_safety_status(url_safety_param_statuses: List[UrlSafetyStatus]) -> UrlSafetyStatus:

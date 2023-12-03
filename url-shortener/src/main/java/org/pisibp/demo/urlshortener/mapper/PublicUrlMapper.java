@@ -1,5 +1,6 @@
 package org.pisibp.demo.urlshortener.mapper;
 
+import org.pisibp.demo.urlshortener.dto.URLSafetyReportResponse;
 import org.pisibp.demo.urlshortener.properties.UrlConfigProperties;
 import org.pisibp.demo.urlshortener.dto.URLShortenerResponse;
 import org.pisibp.demo.urlshortener.dto.urlsafety.UrlSafetyReport;
@@ -16,7 +17,9 @@ public class PublicUrlMapper {
 
     public URLShortenerResponse mapToPublicUrl(String url, UrlSafetyReport urlSafetyReport) {
         return new URLShortenerResponse(
-                String.format("%s/%s", urlConfig.getBaseUrl(), url), urlSafetyReport
+                String.format("%s/%s", urlConfig.getBaseUrl(), url),
+                new URLSafetyReportResponse(urlSafetyReport.status(), urlSafetyReport.getSafetyParams()
+                )
         );
     }
 }

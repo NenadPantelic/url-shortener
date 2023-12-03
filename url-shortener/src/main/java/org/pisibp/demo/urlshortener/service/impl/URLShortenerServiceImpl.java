@@ -1,6 +1,5 @@
 package org.pisibp.demo.urlshortener.service.impl;
 
-import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.pisibp.demo.urlshortener.client.UrlCheckerClient;
