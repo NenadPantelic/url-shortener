@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.shortener {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shortener input, button {
+  height: 30px;
+  padding: 0 10px;
+}
+
+.shortener input {
+  border: 1px solid gray;
+  color: rgb(64, 64, 66);
+}
+
+.shortener input:focus {
+  border: 1px solid rgb(95, 180, 245);
+  outline: none;
+}
+
+.shortener form>button {
+  background-color: rgb(95, 180, 245);
+  border: none;
+  color: white;
+}
+
+.shortener form>button:hover {
+  background-color: rgb(51, 162, 246);
+}
+
+.shortener__viewShot {
+  margin-top: 20px;
+  border: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  color: rgb(64, 64, 66);
+  align-items: center;
+}
+
+.shortener__viewShot button {
+  background-color: transparent;
+  border: none;
+  color: gray;
+}
+
+.shortener__viewShot button:hover {
+  color: rgb(64, 64, 66);
+}
