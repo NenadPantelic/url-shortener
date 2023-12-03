@@ -1,0 +1,429 @@
+12/02/2023 06:39:05 PM: WARNING - The profile has not been provided, defaulting to DEV profile...
+12/02/2023 06:39:55 PM: WARNING - The profile has not been provided, defaulting to DEV profile...
+12/02/2023 06:40:38 PM: WARNING - The profile has not been provided, defaulting to DEV profile...
+12/02/2023 06:40:38 PM: INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:9095
+12/02/2023 06:40:38 PM: INFO - [33mPress CTRL+C to quit[0m
+12/02/2023 06:40:55 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='1')
+12/02/2023 06:40:55 PM: INFO - Checking the safety of the 1
+12/02/2023 06:40:55 PM: INFO - Checking whether the url 1 has a valid syntax.
+12/02/2023 06:40:55 PM: INFO - Checking whether the url 1 has secure connection.
+12/02/2023 06:40:55 PM: WARNING - The 1 is not based on the secure SSL/TLS connection. Details: [Errno 22] Invalid argument.
+12/02/2023 06:40:55 PM: INFO - Checking whether the 1 is up and running.
+12/02/2023 06:40:55 PM: WARNING - The 1 is not up and running. Details: Invalid URL '1': No scheme supplied. Perhaps you meant https://1?.
+12/02/2023 06:40:55 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.NO, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.NO
+12/02/2023 06:40:55 PM: INFO - 127.0.0.1 - - [02/Dec/2023 18:40:55] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/02/2023 06:40:58 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/02/2023 06:40:58 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/02/2023 06:40:58 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/02/2023 06:40:58 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/02/2023 06:40:58 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/02/2023 06:40:58 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/02/2023 06:40:58 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/02/2023 06:40:58 PM: INFO - 127.0.0.1 - - [02/Dec/2023 18:40:58] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/02/2023 06:43:54 PM: WARNING - The profile has not been provided, defaulting to DEV profile...
+12/02/2023 06:43:54 PM: INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:9095
+12/02/2023 06:43:54 PM: INFO - [33mPress CTRL+C to quit[0m
+12/02/2023 09:58:32 PM: WARNING - The profile has not been provided, defaulting to DEV profile...
+12/02/2023 09:58:32 PM: INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:9095
+12/02/2023 09:58:32 PM: INFO - [33mPress CTRL+C to quit[0m
+12/02/2023 09:59:41 PM: ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+12/02/2023 09:59:41 PM: INFO - 127.0.0.1 - - [02/Dec/2023 21:59:41] "[35m[1mPOST /api/v1/url-shortener HTTP/1.1[0m" 500 -
+12/02/2023 10:00:47 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/02/2023 10:00:47 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/02/2023 10:00:47 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/02/2023 10:00:47 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/02/2023 10:00:47 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/02/2023 10:00:47 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/02/2023 10:00:47 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/02/2023 10:00:47 PM: INFO - 127.0.0.1 - - [02/Dec/2023 22:00:47] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/02/2023 10:05:00 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/02/2023 10:05:00 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/02/2023 10:05:00 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/02/2023 10:05:00 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/02/2023 10:05:00 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/02/2023 10:05:00 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/02/2023 10:05:01 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/02/2023 10:05:01 PM: INFO - 127.0.0.1 - - [02/Dec/2023 22:05:01] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/02/2023 10:08:07 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/02/2023 10:08:07 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/02/2023 10:08:07 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/02/2023 10:08:07 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/02/2023 10:08:07 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/02/2023 10:08:07 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/02/2023 10:08:08 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/02/2023 10:08:08 PM: INFO - 127.0.0.1 - - [02/Dec/2023 22:08:08] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/02/2023 10:08:35 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/02/2023 10:08:35 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/02/2023 10:08:35 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/02/2023 10:08:35 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/02/2023 10:08:35 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/02/2023 10:08:35 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/02/2023 10:08:36 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/02/2023 10:08:36 PM: INFO - 127.0.0.1 - - [02/Dec/2023 22:08:36] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 10:59:43 AM: WARNING - The profile has not been provided, defaulting to DEV profile...
+12/03/2023 10:59:43 AM: INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:9095
+12/03/2023 10:59:43 AM: INFO - [33mPress CTRL+C to quit[0m
+12/03/2023 10:59:47 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 10:59:47 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 10:59:47 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 10:59:47 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 10:59:47 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 10:59:47 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 10:59:48 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 10:59:48 AM: INFO - 127.0.0.1 - - [03/Dec/2023 10:59:48] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:00:39 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:00:39 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:00:39 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:00:39 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:00:39 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:00:39 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:00:40 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:00:40 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:00:40] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:01:07 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:01:07 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:01:07 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:01:07 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:01:07 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:01:07 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:01:08 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:01:08 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:01:08] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:01:16 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:01:16 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:01:16 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:01:16 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:01:16 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:01:16 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:01:17 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:01:17 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:01:17] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:01:26 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:01:26 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:01:26 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:01:26 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:01:26 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:01:26 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:01:27 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:01:27 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:01:27] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:14:30 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:14:30 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:14:30 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:14:30 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:14:30 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:14:30 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:14:31 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:14:31 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:14:31] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:16:10 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:16:10 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:16:10 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:16:10 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:16:10 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:16:10 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:16:11 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:16:11 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:16:11] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:18:43 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:18:43 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:18:43 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:18:43 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:18:43 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:18:43 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:18:43 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:18:43 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:18:43] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:18:47 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:18:47 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:18:47 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:18:47 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:18:47 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:18:47 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:18:48 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:18:48 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:18:48] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:18:51 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:18:51 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:18:51 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:18:51 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:18:51 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:18:51 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:18:52 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:18:52 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:18:52] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:20:14 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:20:14 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:20:14 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:20:14 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:20:14 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:20:14 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:20:14 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:20:14 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:20:14] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:42:45 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:42:45 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:42:45 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:42:45 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:42:45 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:42:45 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:42:46 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:42:46 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:42:46] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:42:51 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:42:51 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:42:51 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:42:51 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:42:51 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:42:51 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:42:52 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:42:52 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:42:52] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:43:17 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:43:17 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:43:17 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:43:17 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:43:17 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:43:17 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:43:18 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:43:18 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:43:18] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:45:04 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:45:04 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:45:04 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:45:04 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:45:04 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:45:04 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:45:04 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:45:04 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:45:04] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:47:20 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:47:20 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:47:20 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:47:20 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:47:20 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:47:20 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:47:21 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:47:21 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:47:21] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:53:51 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:53:51 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:53:51 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:53:51 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:53:51 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:53:51 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:53:51 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:53:51 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:53:51] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 11:55:02 AM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 11:55:02 AM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 11:55:02 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 11:55:02 AM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 11:55:02 AM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 11:55:02 AM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 11:55:03 AM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 11:55:03 AM: INFO - 127.0.0.1 - - [03/Dec/2023 11:55:03] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:28:59 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:28:59 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:28:59 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:28:59 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:28:59 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:28:59 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:29:00 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:29:00 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:29:00] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:29:50 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:29:50 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:29:50 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:29:50 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:29:50 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:29:50 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:29:51 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:29:51 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:29:51] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:35:24 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:35:24 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:35:24 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:35:24 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:35:24 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:35:24 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:35:25 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:35:25 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:35:25] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:35:34 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:35:34 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:35:34 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:35:34 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:35:34 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:35:34 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:35:35 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:35:35 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:35:35] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:36:49 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:36:49 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:36:49 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:36:49 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:36:49 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:36:49 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:36:50 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:36:50 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:36:50] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:36:59 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:36:59 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:36:59 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:36:59 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:36:59 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:36:59 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:36:59 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:36:59 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:36:59] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:37:52 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:37:52 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:37:52 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:37:52 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:37:52 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:37:52 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:37:53 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:37:53 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:37:53] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:38:15 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:38:15 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:38:15 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:38:15 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:38:15 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:38:15 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:38:16 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:38:16 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:38:16] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:38:47 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:38:47 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:38:47 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:38:47 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:38:47 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:38:47 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:38:48 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:38:48 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:38:48] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:40:18 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:40:18 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:40:18 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:40:18 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:40:18 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:40:18 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:40:19 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:40:19 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:40:19] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:40:59 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:40:59 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:40:59 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:40:59 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:40:59 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:40:59 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:41:00 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:41:00 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:41:00] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:41:11 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:41:11 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:41:11 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:41:11 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:41:11 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:41:11 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:41:12 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:41:12 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:41:12] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:42:17 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:42:17 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:42:17 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:42:17 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:42:17 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:42:17 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:42:18 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:42:18 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:42:18] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:47:24 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:47:24 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:47:24 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:47:24 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:47:24 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:47:24 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:47:24 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:47:24 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:47:24 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:47:24 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:47:24 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:47:24 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:47:24 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:47:24 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:47:24] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:47:25 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:47:25 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:47:25] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:52:10 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:52:10 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:52:10 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:52:10 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:52:10 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:52:10 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:52:11 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:52:11 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:52:11] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:55:29 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:55:29 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:55:29 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:55:29 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:55:29 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:55:29 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:55:30 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:55:30 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:55:30] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:57:29 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:57:29 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:57:29 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:57:29 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:57:29 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:57:29 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:57:30 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:57:30 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:57:30] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:58:01 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:58:01 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:58:01 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:58:01 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:58:01 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:58:01 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:58:02 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:58:02 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:58:02] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 12:59:54 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 12:59:54 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 12:59:54 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 12:59:54 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 12:59:54 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 12:59:54 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 12:59:54 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 12:59:54 PM: INFO - 127.0.0.1 - - [03/Dec/2023 12:59:54] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 01:01:39 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 01:01:39 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 01:01:39 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 01:01:39 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 01:01:39 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 01:01:39 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 01:01:40 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 01:01:40 PM: INFO - 127.0.0.1 - - [03/Dec/2023 13:01:40] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 01:05:10 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 01:05:10 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 01:05:10 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 01:05:10 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 01:05:10 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 01:05:10 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 01:05:11 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 01:05:11 PM: INFO - 127.0.0.1 - - [03/Dec/2023 13:05:11] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 01:06:34 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 01:06:34 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 01:06:34 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 01:06:34 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 01:06:34 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 01:06:34 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 01:06:35 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 01:06:35 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 01:06:35 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 01:06:35 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 01:06:35 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 01:06:35 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 01:06:35 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 01:06:35 PM: INFO - 127.0.0.1 - - [03/Dec/2023 13:06:35] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 01:06:35 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 01:06:35 PM: INFO - 127.0.0.1 - - [03/Dec/2023 13:06:35] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 01:09:07 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='http://www.fink.rs/sr/')
+12/03/2023 01:09:07 PM: INFO - Checking the safety of the http://www.fink.rs/sr/
+12/03/2023 01:09:07 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has a valid syntax.
+12/03/2023 01:09:07 PM: INFO - Checking whether the url http://www.fink.rs/sr/ has secure connection.
+12/03/2023 01:09:07 PM: WARNING - The http://www.fink.rs/sr/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 01:09:07 PM: INFO - Checking whether the http://www.fink.rs/sr/ is up and running.
+12/03/2023 01:09:08 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 01:09:08 PM: INFO - 127.0.0.1 - - [03/Dec/2023 13:09:08] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 01:09:24 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='https://github.com/')
+12/03/2023 01:09:24 PM: INFO - Checking the safety of the https://github.com/
+12/03/2023 01:09:24 PM: INFO - Checking whether the url https://github.com/ has a valid syntax.
+12/03/2023 01:09:24 PM: INFO - Checking whether the url https://github.com/ has secure connection.
+12/03/2023 01:09:24 PM: WARNING - The https://github.com/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 01:09:24 PM: INFO - Checking whether the https://github.com/ is up and running.
+12/03/2023 01:09:24 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 01:09:24 PM: INFO - 127.0.0.1 - - [03/Dec/2023 13:09:24] "POST /api/v1/url-checker HTTP/1.1" 200 -
+12/03/2023 01:09:47 PM: INFO - Received a request to check the safety of the url - UrlSafetyRequest(url='https://www.google.com/')
+12/03/2023 01:09:47 PM: INFO - Checking the safety of the https://www.google.com/
+12/03/2023 01:09:47 PM: INFO - Checking whether the url https://www.google.com/ has a valid syntax.
+12/03/2023 01:09:47 PM: INFO - Checking whether the url https://www.google.com/ has secure connection.
+12/03/2023 01:09:47 PM: WARNING - The https://www.google.com/ is not based on the secure SSL/TLS connection. Details: [Errno -2] Name or service not known.
+12/03/2023 01:09:47 PM: INFO - Checking whether the https://www.google.com/ is up and running.
+12/03/2023 01:09:47 PM: INFO - Check url safety report:syntax is correct = UrlSafetyStatus.YES, secure connection = UrlSafetyStatus.NO, site is up = UrlSafetyStatus.YES
+12/03/2023 01:09:47 PM: INFO - 127.0.0.1 - - [03/Dec/2023 13:09:47] "POST /api/v1/url-checker HTTP/1.1" 200 -
