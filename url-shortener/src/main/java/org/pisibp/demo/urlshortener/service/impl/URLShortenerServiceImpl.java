@@ -37,7 +37,7 @@ public class URLShortenerServiceImpl implements URLShortenerService {
     }
 
     @Override
-    public URLShortenerResponse makeShortURL(@Valid URLShortenerRequest urlShortenerRequest) {
+    public URLShortenerResponse makeShortUrl(URLShortenerRequest urlShortenerRequest) {
         log.info("Make short URL[input = {}]", urlShortenerRequest);
 
         final String longUrl = urlShortenerRequest.url();
@@ -57,7 +57,7 @@ public class URLShortenerServiceImpl implements URLShortenerService {
     }
 
     @Override
-    public String getCompleteURL(String url) {
+    public String getCompleteUrl(String url) {
         log.info("Get long url[short URL = {}]", url);
         return shortUrlRepository.findByShortUrl(url)
                 .orElseThrow(() -> ApiException.NOT_FOUND_EXCEPTION)

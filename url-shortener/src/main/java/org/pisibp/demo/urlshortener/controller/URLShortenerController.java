@@ -27,14 +27,14 @@ public class URLShortenerController {
     @PostMapping
     public URLShortenerResponse makeShortURL(@Valid @RequestBody URLShortenerRequest urlShortenerRequest) {
         log.info("Received a request to make short url...");
-        return urlShortenerService.makeShortURL(urlShortenerRequest);
+        return urlShortenerService.makeShortUrl(urlShortenerRequest);
     }
 
     @GetMapping("/{shortUrl}")
     public ResponseEntity<Void> getCompleteURL(@PathVariable("shortUrl") String shortUrl) {
         log.info("Received a request to get complete url...");
 
-        String completeUrl = urlShortenerService.getCompleteURL(shortUrl);
+        String completeUrl = urlShortenerService.getCompleteUrl(shortUrl);
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.set("Location", completeUrl);
 

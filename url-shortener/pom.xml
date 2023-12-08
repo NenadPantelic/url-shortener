@@ -19,7 +19,10 @@
         <dep.lombok.version>1.18.20</dep.lombok.version>
         <!-- Make sure to use the same version as the other JUnit libs -->
         <dep.junit-params.version>5.9.3</dep.junit-params.version>
-<!--        <dep.spring-web.version>5.9.3</dep.spring-web.version>-->
+        <dep.mockito.version>1.10.19</dep.mockito.version>
+        <dep.testcontainers-junit.version>1.15.1</dep.testcontainers-junit.version>
+        <dep.testcontainers-postgres.version>1.19.0</dep.testcontainers-postgres.version>
+        <dep.hamcrest.version>2.1</dep.hamcrest.version>
     </properties>
     <dependencies>
         <dependency>
@@ -51,7 +54,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-<!--            <version>6.0.13</version>-->
         </dependency>
 
         <dependency>
@@ -86,6 +88,45 @@
             <artifactId>junit-jupiter-params</artifactId>
             <version>${dep.junit-params.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${dep.mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${dep.testcontainers-junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${dep.testcontainers-postgres.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>${dep.hamcrest.version}</version>
         </dependency>
     </dependencies>
 

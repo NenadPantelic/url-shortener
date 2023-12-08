@@ -6,7 +6,7 @@ import java.util.Map;
 public class UrlBase62Converter {
 
     private static final int BASE = 62;
-    private static final int LENGTH_OF_URL= 11;
+    private static final int LENGTH_OF_URL = 11;
     private static final Map<Long, String> BASE_62_CONVERSION_MAP = new HashMap<>();
 
     static {
@@ -42,5 +42,4 @@ public class UrlBase62Converter {
 
         return strBuilder.reverse().toString();
     }
-
 }

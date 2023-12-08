@@ -5,7 +5,7 @@ import org.pisibp.demo.urlshortener.dto.URLShortenerResponse;
 
 public interface URLShortenerService {
 
-    URLShortenerResponse makeShortURL(URLShortenerRequest urlShortenerRequest);
+    URLShortenerResponse makeShortUrl(URLShortenerRequest urlShortenerRequest);
 
-    String getCompleteURL(String shortUrl);
+    String getCompleteUrl(String shortUrl);
 }

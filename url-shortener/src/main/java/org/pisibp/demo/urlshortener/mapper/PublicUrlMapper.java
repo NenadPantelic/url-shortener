@@ -18,8 +18,7 @@ public class PublicUrlMapper {
     public URLShortenerResponse mapToPublicUrl(String url, UrlSafetyReport urlSafetyReport) {
         return new URLShortenerResponse(
                 String.format("%s/%s", urlConfig.getBaseUrl(), url),
-                new URLSafetyReportResponse(urlSafetyReport.status(), urlSafetyReport.getSafetyParams()
-                )
+                new URLSafetyReportResponse(urlSafetyReport.status(), urlSafetyReport.safetyParams())
         );
     }
 }
