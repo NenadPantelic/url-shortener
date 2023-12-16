@@ -8,19 +8,19 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-class UrlBase62ConverterTest {
+class URLBase62ConverterTest {
 
     @ParameterizedTest
     @MethodSource("provideSingleDigitNumbersForConvert")
     public void testConvert_withSingleDigitNumber(long input, String expected) {
-        Assertions.assertThat(UrlBase62Converter.convert(input)).isEqualTo(expected);
+        Assertions.assertThat(URLBase62Converter.convert(input)).isEqualTo(expected);
     }
 
     @Test
     public void testConvert_withLargerNumbers() {
-        Assertions.assertThat(UrlBase62Converter.convert(62)).isEqualTo("00000000010");
-        Assertions.assertThat(UrlBase62Converter.convert(7_912)).isEqualTo("0000000023C");
-        Assertions.assertThat(UrlBase62Converter.convert(Long.MAX_VALUE)).isEqualTo("aZl8N0y58M7");
+        Assertions.assertThat(URLBase62Converter.convert(62)).isEqualTo("00000000010");
+        Assertions.assertThat(URLBase62Converter.convert(7_912)).isEqualTo("0000000023C");
+        Assertions.assertThat(URLBase62Converter.convert(Long.MAX_VALUE)).isEqualTo("aZl8N0y58M7");
     }
 
 /*

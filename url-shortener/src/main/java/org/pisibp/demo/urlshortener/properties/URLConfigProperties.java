@@ -5,10 +5,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @Data
-//@Configuration
 @ConfigurationProperties(prefix = "url-config")
 @ConfigurationPropertiesScan
-public class UrlConfigProperties {
+public class URLConfigProperties {
 
     private final String baseUrl;
 }

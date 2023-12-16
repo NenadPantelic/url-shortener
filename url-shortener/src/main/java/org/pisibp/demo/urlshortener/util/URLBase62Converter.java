@@ -3,7 +3,7 @@ package org.pisibp.demo.urlshortener.util;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UrlBase62Converter {
+public class URLBase62Converter {
 
     private static final int BASE = 62;
     private static final int LENGTH_OF_URL = 11;

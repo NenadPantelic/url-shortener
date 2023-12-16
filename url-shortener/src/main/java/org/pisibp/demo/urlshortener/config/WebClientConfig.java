@@ -3,7 +3,7 @@ package org.pisibp.demo.urlshortener.config;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.handler.timeout.WriteTimeoutHandler;
-import org.pisibp.demo.urlshortener.properties.UrlCheckerConfigProperties;
+import org.pisibp.demo.urlshortener.properties.URLCheckerConfigProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class WebClientConfig {
 
     @Bean
-    public WebClient urlCheckClient(UrlCheckerConfigProperties urlCheckerConfigProperties) {
+    public WebClient urlCheckClient(URLCheckerConfigProperties urlCheckerConfigProperties) {
         HttpClient httpClient = HttpClient.create()
                 .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, urlCheckerConfigProperties.getTimeoutInMillis())
                 .responseTimeout(Duration.ofMillis(urlCheckerConfigProperties.getTimeoutInMillis()))

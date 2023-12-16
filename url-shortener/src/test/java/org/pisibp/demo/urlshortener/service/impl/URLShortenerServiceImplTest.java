@@ -12,13 +12,13 @@ import org.pisibp.demo.urlshortener.client.UrlCheckerClient;
 import org.pisibp.demo.urlshortener.dto.URLSafetyReportResponse;
 import org.pisibp.demo.urlshortener.dto.URLShortenerRequest;
 import org.pisibp.demo.urlshortener.dto.URLShortenerResponse;
-import org.pisibp.demo.urlshortener.dto.urlsafety.UrlSafetyReport;
-import org.pisibp.demo.urlshortener.dto.urlsafety.UrlSafetyStatus;
+import org.pisibp.demo.urlshortener.dto.urlsafety.URLSafetyReport;
+import org.pisibp.demo.urlshortener.dto.urlsafety.URLSafetyStatus;
 import org.pisibp.demo.urlshortener.exception.ApiException;
 import org.pisibp.demo.urlshortener.generator.IdGenerator;
-import org.pisibp.demo.urlshortener.mapper.PublicUrlMapper;
-import org.pisibp.demo.urlshortener.model.ShortUrl;
-import org.pisibp.demo.urlshortener.repository.ShortUrlRepository;
+import org.pisibp.demo.urlshortener.mapper.PublicURLMapper;
+import org.pisibp.demo.urlshortener.model.ShortURL;
+import org.pisibp.demo.urlshortener.repository.ShortURLRepository;
 import org.pisibp.demo.urlshortener.service.URLShortenerService;
 import org.springframework.dao.DataIntegrityViolationException;
 
@@ -31,10 +31,10 @@ class URLShortenerServiceImplTest {
     private static final String PUBLIC_URL_BASE = "http://pub.lic";
 
     @Mock
-    private PublicUrlMapper urlMapper;
+    private PublicURLMapper urlMapper;
 
     @Mock
-    private ShortUrlRepository shortUrlRepository;
+    private ShortURLRepository shortUrlRepository;
 
     @Mock
     private IdGenerator idGenerator;
@@ -64,24 +64,24 @@ class URLShortenerServiceImplTest {
 
         // when
         Mockito.doReturn(id).when(idGenerator).getNext();
-        ShortUrl expectedShortUrl = ShortUrl.builder()
+        ShortURL expectedShortURL = ShortURL.builder()
                 .id(id)
                 .longUrl(longUrl)
                 .shortUrl(shortUrl)
                 .build();
 
-        final UrlSafetyStatus overallStatus = UrlSafetyStatus.NO;
-        final Map<String, UrlSafetyStatus> urlSafetyStatuses = Map.of(
-                "param-1", UrlSafetyStatus.YES,
-                "param-2", UrlSafetyStatus.NO,
-                "param-3", UrlSafetyStatus.UNKNOWN
+        final URLSafetyStatus overallStatus = URLSafetyStatus.NO;
+        final Map<String, URLSafetyStatus> urlSafetyStatuses = Map.of(
+                "param-1", URLSafetyStatus.YES,
+                "param-2", URLSafetyStatus.NO,
+                "param-3", URLSafetyStatus.UNKNOWN
         );
-        final UrlSafetyReport urlSafetyReport = new UrlSafetyReport(
+        final URLSafetyReport urlSafetyReport = new URLSafetyReport(
                 overallStatus, urlSafetyStatuses
         );
         Mockito.doReturn(urlSafetyReport).when(urlCheckerClient).checkUrlSafety(longUrl);
 
-        Mockito.doReturn(expectedShortUrl).when(shortUrlRepository).save(expectedShortUrl);
+        Mockito.doReturn(expectedShortURL).when(shortUrlRepository).save(expectedShortURL);
 
         final String publicUrl = String.format("%s/%s", PUBLIC_URL_BASE, shortUrl);
         URLShortenerResponse expectedUrlShortenerResponse = new URLShortenerResponse(
@@ -111,19 +111,19 @@ class URLShortenerServiceImplTest {
 
         // when
         Mockito.doReturn(id).when(idGenerator).getNext();
-        ShortUrl expectedShortUrl = ShortUrl.builder()
+        ShortURL expectedShortURL = ShortURL.builder()
                 .id(id)
                 .longUrl(longUrl)
                 .shortUrl(shortUrl)
                 .build();
 
-        final UrlSafetyStatus overallStatus = UrlSafetyStatus.NO;
-        final Map<String, UrlSafetyStatus> urlSafetyStatuses = Map.of(
-                "param-1", UrlSafetyStatus.YES,
-                "param-2", UrlSafetyStatus.NO,
-                "param-3", UrlSafetyStatus.UNKNOWN
+        final URLSafetyStatus overallStatus = URLSafetyStatus.NO;
+        final Map<String, URLSafetyStatus> urlSafetyStatuses = Map.of(
+                "param-1", URLSafetyStatus.YES,
+                "param-2", URLSafetyStatus.NO,
+                "param-3", URLSafetyStatus.UNKNOWN
         );
-        final UrlSafetyReport urlSafetyReport = new UrlSafetyReport(
+        final URLSafetyReport urlSafetyReport = new URLSafetyReport(
                 overallStatus, urlSafetyStatuses
         );
         Mockito.doReturn(urlSafetyReport).when(urlCheckerClient).checkUrlSafety(longUrl);
@@ -131,9 +131,9 @@ class URLShortenerServiceImplTest {
         // throw an exception as it's already stored
         Mockito.doThrow(new DataIntegrityViolationException("Unique constraint violated"))
                 .when(shortUrlRepository)
-                .save(expectedShortUrl);
+                .save(expectedShortURL);
 
-        Mockito.doReturn(expectedShortUrl).when(shortUrlRepository).findByLongUrl(longUrl);
+        Mockito.doReturn(expectedShortURL).when(shortUrlRepository).findByLongUrl(longUrl);
 
         final String publicUrl = String.format("%s/%s", PUBLIC_URL_BASE, shortUrl);
         URLShortenerResponse expectedUrlShortenerResponse = new URLShortenerResponse(
@@ -150,7 +150,6 @@ class URLShortenerServiceImplTest {
                 .isEqualTo(expectedUrlShortenerResponse);
     }
 
-
     @Test
     @DisplayName("Get complete URL.")
     public void givenShortUrlWhenGetCompleteUrlCalledShouldReturnCompleteUrl() {
@@ -159,12 +158,12 @@ class URLShortenerServiceImplTest {
         final String longUrl = "http://test.example/veryveryverylongurl";
 
         // when
-        ShortUrl expectedShortUrl = ShortUrl.builder()
+        ShortURL expectedShortURL = ShortURL.builder()
                 .longUrl(longUrl)
                 .shortUrl(shortUrl)
                 .build();
 
-        Mockito.doReturn(Optional.of(expectedShortUrl))
+        Mockito.doReturn(Optional.of(expectedShortURL))
                 .when(shortUrlRepository)
                 .findByShortUrl(shortUrl);
 
@@ -172,7 +171,6 @@ class URLShortenerServiceImplTest {
                 .assertThat(urlShortenerService.getCompleteUrl(shortUrl))
                 .isEqualTo(longUrl);
     }
-
 
     @Test
     @DisplayName("Get complete URL when short URL is not found.")

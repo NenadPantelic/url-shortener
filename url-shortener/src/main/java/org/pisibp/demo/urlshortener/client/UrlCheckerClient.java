@@ -1,8 +1,8 @@
 package org.pisibp.demo.urlshortener.client;
 
-import org.pisibp.demo.urlshortener.dto.urlsafety.UrlSafetyReport;
+import org.pisibp.demo.urlshortener.dto.urlsafety.URLSafetyReport;
 
 public interface UrlCheckerClient {
 
-    UrlSafetyReport checkUrlSafety(String url);
+    URLSafetyReport checkUrlSafety(String url);
 }

@@ -1,6 +1,6 @@
 package org.pisibp.demo.urlshortener.dto.urlsafety;
 
-public enum UrlSafetyStatus {
+public enum URLSafetyStatus {
 
     // safe
     YES,

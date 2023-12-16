@@ -19,7 +19,6 @@ public class DatabaseSetup {
             .withUsername("Test")
             .withPassword("Test");
 
-
     @BeforeAll
     public static void setUp() {
         container.withReuse(true);

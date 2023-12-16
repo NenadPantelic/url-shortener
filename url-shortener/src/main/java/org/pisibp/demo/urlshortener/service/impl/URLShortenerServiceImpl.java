@@ -1,18 +1,17 @@
 package org.pisibp.demo.urlshortener.service.impl;
 
-import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.pisibp.demo.urlshortener.client.UrlCheckerClient;
 import org.pisibp.demo.urlshortener.dto.URLShortenerRequest;
 import org.pisibp.demo.urlshortener.dto.URLShortenerResponse;
-import org.pisibp.demo.urlshortener.dto.urlsafety.UrlSafetyReport;
+import org.pisibp.demo.urlshortener.dto.urlsafety.URLSafetyReport;
 import org.pisibp.demo.urlshortener.exception.ApiException;
 import org.pisibp.demo.urlshortener.generator.IdGenerator;
-import org.pisibp.demo.urlshortener.mapper.PublicUrlMapper;
-import org.pisibp.demo.urlshortener.model.ShortUrl;
-import org.pisibp.demo.urlshortener.repository.ShortUrlRepository;
+import org.pisibp.demo.urlshortener.mapper.PublicURLMapper;
+import org.pisibp.demo.urlshortener.model.ShortURL;
+import org.pisibp.demo.urlshortener.repository.ShortURLRepository;
 import org.pisibp.demo.urlshortener.service.URLShortenerService;
-import org.pisibp.demo.urlshortener.util.UrlBase62Converter;
+import org.pisibp.demo.urlshortener.util.URLBase62Converter;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
@@ -20,14 +19,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class URLShortenerServiceImpl implements URLShortenerService {
 
-    private final PublicUrlMapper urlMapper;
-    private final ShortUrlRepository shortUrlRepository;
+    private final PublicURLMapper urlMapper;
+    private final ShortURLRepository shortUrlRepository;
     private final IdGenerator idGenerator;
 
     private final UrlCheckerClient urlCheckerClient;
 
-    public URLShortenerServiceImpl(PublicUrlMapper urlMapper,
-                                   ShortUrlRepository shortUrlRepository,
+    public URLShortenerServiceImpl(PublicURLMapper urlMapper,
+                                   ShortURLRepository shortUrlRepository,
                                    IdGenerator idGenerator,
                                    UrlCheckerClient urlCheckerClient) {
         this.urlMapper = urlMapper;
@@ -41,12 +40,12 @@ public class URLShortenerServiceImpl implements URLShortenerService {
         log.info("Make short URL[input = {}]", urlShortenerRequest);
 
         final String longUrl = urlShortenerRequest.url();
-        UrlSafetyReport urlSafetyReport = urlCheckerClient.checkUrlSafety(longUrl);
+        URLSafetyReport urlSafetyReport = urlCheckerClient.checkUrlSafety(longUrl);
 
         final long id = idGenerator.getNext();
-        final String shortenedUrlIdentifier = UrlBase62Converter.convert(id);
+        final String shortenedUrlIdentifier = URLBase62Converter.convert(id);
 
-        ShortUrl shortUrl = ShortUrl.builder()
+        ShortURL shortUrl = ShortURL.builder()
                 .id(id)
                 .longUrl(longUrl)
                 .shortUrl(shortenedUrlIdentifier)
@@ -64,7 +63,7 @@ public class URLShortenerServiceImpl implements URLShortenerService {
                 .getLongUrl();
     }
 
-    private ShortUrl insertOrGet(ShortUrl shortUrl) {
+    private ShortURL insertOrGet(ShortURL shortUrl) {
         try {
             return shortUrlRepository.save(shortUrl);
         } catch (DataIntegrityViolationException e) {

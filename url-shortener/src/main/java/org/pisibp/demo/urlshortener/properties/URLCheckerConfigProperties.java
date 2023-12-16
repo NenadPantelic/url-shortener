@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 @Data
 @ConfigurationProperties(prefix = "url-checker")
 @ConfigurationPropertiesScan
-public class UrlCheckerConfigProperties {
+public class URLCheckerConfigProperties {
 
     private final String url;
     private final String headerKey;

@@ -6,10 +6,10 @@ import org.hamcrest.Matchers;
 import org.hamcrest.core.IsEqual;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.pisibp.demo.urlshortener.dto.urlsafety.UrlCheckerRequest;
-import org.pisibp.demo.urlshortener.model.ShortUrl;
+import org.pisibp.demo.urlshortener.dto.urlsafety.URLCheckerRequest;
+import org.pisibp.demo.urlshortener.model.ShortURL;
 import org.pisibp.demo.urlshortener.repository.DatabaseSetup;
-import org.pisibp.demo.urlshortener.repository.ShortUrlRepository;
+import org.pisibp.demo.urlshortener.repository.ShortURLRepository;
 import org.pisibp.demo.urlshortener.service.URLShortenerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,7 +23,7 @@ class URLShortenerControllerTest extends DatabaseSetup {
     private URLShortenerService urlShortenerService;
 
     @Autowired
-    private ShortUrlRepository shortUrlRepository;
+    private ShortURLRepository shortUrlRepository;
 
     @LocalServerPort
     private Integer port;
@@ -39,7 +39,7 @@ class URLShortenerControllerTest extends DatabaseSetup {
         String longUrl = "https://www.google.com/";
         String shortenedUrl = "short.url";
 
-        ShortUrl shortUrl = ShortUrl.builder()
+        ShortURL shortUrl = ShortURL.builder()
                 .id(123456L)
                 .longUrl(longUrl)
                 .shortUrl(shortenedUrl)
@@ -64,12 +64,11 @@ class URLShortenerControllerTest extends DatabaseSetup {
                 .statusCode(404);
     }
 
-
     @Test
     public void testMakeShortUrl() {
         String longUrl = "https://www.google.com/";
 
-        RestAssured.with().body(new UrlCheckerRequest(longUrl))
+        RestAssured.with().body(new URLCheckerRequest(longUrl))
                 .contentType(ContentType.JSON)
                 .when()
                 .post("/api/v1/url-shortener")
@@ -83,7 +82,7 @@ class URLShortenerControllerTest extends DatabaseSetup {
 
     @Test
     public void testMakeShortUrlWithEmptyUrl() {
-        RestAssured.with().body(new UrlCheckerRequest(null))
+        RestAssured.with().body(new URLCheckerRequest(null))
                 .contentType(ContentType.JSON)
                 .when()
                 .post("/api/v1/url-shortener")

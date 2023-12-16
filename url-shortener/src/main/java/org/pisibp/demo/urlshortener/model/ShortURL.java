@@ -17,7 +17,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @Builder
 @Entity
-public class ShortUrl {
+public class ShortURL {
 
     @Id
     private Long id;

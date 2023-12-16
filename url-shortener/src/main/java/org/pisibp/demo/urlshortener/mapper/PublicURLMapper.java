@@ -1,21 +1,21 @@
 package org.pisibp.demo.urlshortener.mapper;
 
 import org.pisibp.demo.urlshortener.dto.URLSafetyReportResponse;
-import org.pisibp.demo.urlshortener.properties.UrlConfigProperties;
+import org.pisibp.demo.urlshortener.properties.URLConfigProperties;
 import org.pisibp.demo.urlshortener.dto.URLShortenerResponse;
-import org.pisibp.demo.urlshortener.dto.urlsafety.UrlSafetyReport;
+import org.pisibp.demo.urlshortener.dto.urlsafety.URLSafetyReport;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PublicUrlMapper {
+public class PublicURLMapper {
 
-    private final UrlConfigProperties urlConfig;
+    private final URLConfigProperties urlConfig;
 
-    public PublicUrlMapper(UrlConfigProperties urlConfig) {
+    public PublicURLMapper(URLConfigProperties urlConfig) {
         this.urlConfig = urlConfig;
     }
 
-    public URLShortenerResponse mapToPublicUrl(String url, UrlSafetyReport urlSafetyReport) {
+    public URLShortenerResponse mapToPublicUrl(String url, URLSafetyReport urlSafetyReport) {
         return new URLShortenerResponse(
                 String.format("%s/%s", urlConfig.getBaseUrl(), url),
                 new URLSafetyReportResponse(urlSafetyReport.status(), urlSafetyReport.safetyParams())
