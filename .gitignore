@@ -22,3 +22,7 @@ url-checker/venv
 url-checker/__pycache__
 url-checker/.idea
 url-checker/app.log
+
+**/venv
+**/.idea
+**/__pycache__

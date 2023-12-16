@@ -19,7 +19,7 @@ function mapSafetyStatusToComponent(safetyStatus: string) {
 
 function ShowSafetyParamsPopup(props) {
   const safetyParams = props.safetyParams;
-  console.log(safetyParams);
+
   return (
     <div style={{ textAlign: "left" }}>
       <div>
@@ -36,7 +36,7 @@ function ShowSafetyParamsPopup(props) {
 
 function App() {
   const [url, setUrl] = useState<any | null>("");
-  const [shortendUrl, setShortenedUrl] = useState("");
+  const [shortenedUrl, setShortenedUrl] = useState("");
   const [safetyReport, setSafetyReport] = useState<UrlSafetyReport>({
     status: SafetyStatus.UNKNOWN,
     safetyParams: {
@@ -83,17 +83,18 @@ function App() {
         {/* form to enter URL to be shortened */}
         <form onSubmit={shortenUrl}>
           <input
+            id="url-bar"
             placeholder="Enter URL"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
           />
-          <button>Submit</button>
+          <button id="shorten-url-button">Submit</button>
         </form>
         {/* Section to view shortened URLS */}
-        {shortendUrl && (
-          <div className="shortener__viewShot">
-            {shortendUrl}
-            <CopyToClipboard text={shortendUrl}>
+        {shortenedUrl && (
+          <div id="shortened-url" className="shortener__viewShot">
+            {shortenedUrl}
+            <CopyToClipboard text={shortenedUrl}>
               <button onClick={() => alert("The URL has been copied")}>
                 copy
               </button>
