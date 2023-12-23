@@ -2,21 +2,22 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
 
 # Name[optional] - displayed on repos action page
-name: Build url-shortener API
+name: url-shortener service CI
 
 on: # required
   # every time the push to url-branch is triggered, this workflow should be executed
   push:
-    branches: url-shortener
-  # every time the PR to url-branch is triggered, this workflow should be executed
+  #   branches: [$default-branch]
+  # # every time the PR to url-branch is triggered, this workflow should be executed
   pull_request:
-    # branches: [$default-branch]
-    branches: url-shortener
-    # The list of events - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+  #   branches: [$default-branch]
+  # The list of events - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 
 jobs: # required
   # one or more jobs
-  build: # jobs.build
+  url-shortener-build: # jobs.build
+    # trigger this job only if the source branch is url-shortener or the main branch itself
+    if: ${{ github.ref == 'refs/heads/url-shortener' || github.ref == 'refs/heads/main' || github.head_ref == 'url-shortener' || github.head_ref == 'main' }}
     # The operating system installed on the CI/CD workflow runner
     # runs-on: ubuntu-latest # Ubuntu, Windows and macOS
     runs-on: ${{matrix.os}} # Ubuntu, Windows and macOS
@@ -43,5 +44,6 @@ jobs: # required
       - name: Build with Maven
         # package the artifact in non-interactive mode based on POM file
         run: mvn -B package --file url-shortener/pom.xml
+  # The way to make jobs dependent
   # publish:
   #   needs: build
