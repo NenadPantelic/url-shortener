@@ -18,12 +18,7 @@ jobs: # required
   url-shortener-build: # jobs.build
     # trigger this job only if the source branch is url-shortener or the main branch itself
     if: ${{ github.ref == 'refs/heads/url-shortener' || github.ref == 'refs/heads/main' || github.head_ref == 'url-shortener' || github.head_ref == 'main' }}
-    # The operating system installed on the CI/CD workflow runner
-    # runs-on: ubuntu-latest # Ubuntu, Windows and macOS
-    runs-on: ${{matrix.os}} # Ubuntu, Windows and macOS
-    strategy:
-      matrix:
-        os: [ubuntu-latest, window-latest, macOS-latest]
+    runs-on: ubuntu-latest
     # sequence of tasks/steps
     steps:
       # 1. Set up JDK 17
@@ -47,3 +42,23 @@ jobs: # required
   # The way to make jobs dependent
   # publish:
   #   needs: build
+  frontend-build:
+    if: ${{ github.ref == 'refs/heads/frontend' || github.ref == 'refs/heads/main' || github.head_ref == 'frontend' || github.head_ref == 'main' }}
+    # The operating system installed on the CI/CD workflow runner
+    # runs-on: ubuntu-latest # Ubuntu, Windows and macOS
+    runs-on: ${{matrix.os}} # Ubuntu, Windows and macOS
+    strategy:
+      matrix:
+        os: [ubuntu-latest, window-latest, macOS-latest]
+        node-version: [12.x, 14.x, 16.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build --if-present
+      # for tests
+      # - run: npm test
