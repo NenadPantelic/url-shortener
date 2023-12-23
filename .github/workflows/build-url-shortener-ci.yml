@@ -1,0 +1,45 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# Name[optional] - displayed on repos action page
+name: Build url-shortener API
+
+on: # required
+  # every time the push to url-branch is triggered, this workflow should be executed
+  push:
+    branches: url-shortener
+  # every time the PR to url-branch is triggered, this workflow should be executed
+  pull_request:
+    # branches: [$default-branch]
+    branches: url-shortener
+    # The list of events - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+
+jobs: # required
+  # one or more jobs
+  build: # jobs.build
+    # The operating system installed on the CI/CD workflow runner
+    runs-on: ubuntu-latest
+    # sequence of tasks/steps
+    steps:
+      # 1. Set up JDK 17
+      # 2. Build with Maven
+      # 3. Update dependency graph
+      # based on predefined checkout action - https://github.com/actions/checkout/tree/v3/; use `uses` expression
+      - uses: actions/checkout@v3
+      # name of the step
+      - name: Set up JDK 17
+        # https://github.com/actions/setup-java/tree/v3/; downloads and sets up the wanted version of Java
+        uses: actions/setup-java@v3
+        with:
+          # uses Java 17
+          java-version: "17"
+          # based on temurin version of Java - https://adoptium.net/temurin/releases/
+          distribution: "temurin"
+          # cache Maven dependencies between builds
+          cache: maven
+      - name: Build with Maven
+        # package the artifact in non-interactive mode based on POM file
+        run: mvn -B package --file url-shortener/pom.xml
+      # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
+      - name: Update dependency graph
+        uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6

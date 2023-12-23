@@ -22,7 +22,6 @@
         <dep.mockito.version>1.10.19</dep.mockito.version>
         <dep.testcontainers-junit.version>1.15.1</dep.testcontainers-junit.version>
         <dep.testcontainers-postgres.version>1.19.0</dep.testcontainers-postgres.version>
-        <dep.hamcrest.version>2.1</dep.hamcrest.version>
     </properties>
     <dependencies>
         <dependency>
@@ -121,12 +120,6 @@
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-all</artifactId>
-            <version>${dep.hamcrest.version}</version>
         </dependency>
     </dependencies>
 
