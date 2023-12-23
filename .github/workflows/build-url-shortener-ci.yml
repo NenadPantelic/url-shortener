@@ -5,10 +5,11 @@
 name: url-shortener service CI
 
 on: # required
-  # every time the push to url-branch is triggered, this workflow should be executed
+  # whenever the code is pushed to some branch this event is triggered and the workflow should be executed
   push:
   #   branches: [$default-branch]
-  # # every time the PR to url-branch is triggered, this workflow should be executed
+  # whenever the PR is created this event is triggered and the workflow should be executed
+  # without stating branches here, it means 'for any branch'
   pull_request:
   #   branches: [$default-branch]
   # The list of events - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
@@ -45,11 +46,10 @@ jobs: # required
   frontend-build:
     if: ${{ github.ref == 'refs/heads/frontend' || github.ref == 'refs/heads/main' || github.head_ref == 'frontend' || github.head_ref == 'main' }}
     # The operating system installed on the CI/CD workflow runner
-    # runs-on: ubuntu-latest # Ubuntu, Windows and macOS
     runs-on: ${{matrix.os}} # Ubuntu, Windows and macOS
     strategy:
       matrix:
-        os: [ubuntu-latest, window-latest, macOS-latest]
+        os: [ubuntu-latest, macOS-latest]
         node-version: [12.x, 14.x, 16.x]
 
     steps:
@@ -58,7 +58,37 @@ jobs: # required
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      # clean install node modules; when you have multiple statements, it is easier to use block statements
       - run: cd frontend && npm ci
+      # run build
       - run: cd frontend && npm run build --if-present
       # for tests
       # - run: npm test
+
+  url-checker-build:
+    if: ${{ github.ref == 'refs/heads/url-checker' || github.ref == 'refs/heads/main' || github.head_ref == 'url-checker' || github.head_ref == 'main' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          cd url-checker
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Lint with flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      # - name: Test with pytest
+      #   run: |
+      #     # otherwise it will execute e2e tests in the root folder
+      #     cd url-checker
+      #     pytest
