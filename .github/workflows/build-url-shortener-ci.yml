@@ -59,6 +59,6 @@ jobs: # required
         with:
           node-version: ${{ matrix.node-version }}
       - run: cd frontend && npm ci
-      - run: npm run build --if-present
+      - run: cd frontend && npm run build --if-present
       # for tests
       # - run: npm test
