@@ -5,6 +5,7 @@ import io.restassured.http.ContentType;
 import org.hamcrest.Matchers;
 import org.hamcrest.core.IsEqual;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.pisibp.demo.urlshortener.dto.urlsafety.URLCheckerRequest;
 import org.pisibp.demo.urlshortener.model.ShortURL;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 
+@Disabled("Disabled since it requires service dependencies to be up and running")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 // do note - we need url-checker service up and running for these tests; it's better to use stub server for the url-checker
 class URLShortenerControllerTest extends DatabaseSetup {

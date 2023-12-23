@@ -22,7 +22,7 @@ public class DatabaseSetup {
     @BeforeAll
     public static void setUp() {
         container.withReuse(true);
-        container.withInitScript("src/main/resources/db/init-db.sql");
+        container.withInitScript("db/init.sql");
         container.start();
     }
 
