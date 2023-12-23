@@ -18,7 +18,11 @@ jobs: # required
   # one or more jobs
   build: # jobs.build
     # The operating system installed on the CI/CD workflow runner
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest # Ubuntu, Windows and macOS
+    runs-on: ${{matrix.os}} # Ubuntu, Windows and macOS
+    strategy:
+      matrix:
+        os: [ubuntu-latest, window-latest, macOS-latest]
     # sequence of tasks/steps
     steps:
       # 1. Set up JDK 17
@@ -39,3 +43,5 @@ jobs: # required
       - name: Build with Maven
         # package the artifact in non-interactive mode based on POM file
         run: mvn -B package --file url-shortener/pom.xml
+  # publish:
+  #   needs: build
