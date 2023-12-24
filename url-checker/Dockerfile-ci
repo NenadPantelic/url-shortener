@@ -1,0 +1,67 @@
+###########
+# BUILDER #
+###########
+
+# pull official base image
+FROM python:3.10.13-slim as builder
+
+# set work directory
+WORKDIR /usr/src/url-checker
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install system dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends gcc
+
+# lint
+RUN pip install --upgrade pip
+RUN pip install flake8==6.0.0
+COPY ./url-checker /usr/src/url-checker/
+# RUN flake8 --ignore=E501,F401 .
+
+# install python dependencies
+COPY ./url-checker/requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/url-checker/wheels -r requirements.txt
+
+
+#########
+# FINAL #
+#########
+
+# pull official base image
+FROM python:3.10.13-slim
+
+# create directory for the url-checker user
+RUN mkdir -p /home/url-checker
+
+# create the url-checker user
+RUN addgroup --system url-checker && adduser --system --group url-checker
+
+# create the appropriate directories
+ENV HOME=/home/url-checker
+ENV APP_HOME=/home/url-checker/app
+
+RUN mkdir $APP_HOME
+WORKDIR $APP_HOME
+
+# install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends netcat-traditional
+COPY --from=builder /usr/src/url-checker/wheels /wheels
+COPY --from=builder /usr/src/url-checker/requirements.txt .
+RUN pip install --upgrade pip
+RUN pip install --no-cache /wheels/*
+
+# copy project
+COPY . $APP_HOME
+
+# chown all the files to the url-checker user
+RUN chown -R url-checker:url-checker $APP_HOME
+
+# change to the url-checker user
+USER url-checker
+
+# it is better though to use some web server environment like gunicorn
+ENTRYPOINT ["python3", "server.py", "-prod"]

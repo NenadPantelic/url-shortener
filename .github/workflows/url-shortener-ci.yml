@@ -40,6 +40,20 @@ jobs: # required
       - name: Build with Maven
         # package the artifact in non-interactive mode based on POM file
         run: mvn -B package --file url-shortener/pom.xml
+        # on Ubuntu, Docker comes preinstalled
+      - name: Build and push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: npantelic/url-shortener
+          tags: 1.0, latest
+          registry: docker.io
+          dockerfile: url-shortener/Dockerfile-ci
+          # secrets will be stored in GH repo; Settings -> Secrets and variables -> Actions: Repository secrets
+          # DOCKER_USERNAME: <your-docker-username>
+          # DOCKER_PASSWORD: <your-docker-password>
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
   # The way to make jobs dependent
   # publish:
   #   needs: build
@@ -64,6 +78,16 @@ jobs: # required
       - run: cd frontend && npm run build --if-present
       # for tests
       # - run: npm test
+      - if: matrix.os  == 'ubuntu-latest'
+        name: Build and push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: npantelic/url-shortener-frontend
+          tags: 1.0, latest
+          registry: docker.io
+          dockerfile: frontend/Dockerfile-ci
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
   url-checker-build:
     if: ${{ github.ref == 'refs/heads/url-checker' || github.ref == 'refs/heads/main' || github.head_ref == 'url-checker' || github.head_ref == 'main' }}
@@ -92,3 +116,12 @@ jobs: # required
       #     # otherwise it will execute e2e tests in the root folder
       #     cd url-checker
       #     pytest
+      - name: Build and push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: npantelic/url-checker
+          tags: 1.0, latest
+          registry: docker.io
+          dockerfile: url-checker/Dockerfile-ci
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
