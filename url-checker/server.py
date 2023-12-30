@@ -22,7 +22,8 @@ SESSION_CONFIG_KEY = 'url-checker.session-value'
 PORT_CONFIG_KEY = 'url-checker.port'
 
 parser = ArgumentParser()
-parser.add_argument('-p', '--profile', help='The profile used to configure the setup of the server.')
+parser.add_argument(
+    '-p', '--profile', help='The profile used to configure the setup of the server.')
 
 args = parser.parse_args()
 profile = args.profile
@@ -32,7 +33,8 @@ if profile == DEV_PROFILE:
 elif profile == PRODUCTION_PROFILE:
     profile_config_file = PROD_PROFILE_CONFIG_FILE
 else:
-    log.warning('The profile has not been provided, defaulting to DEV profile...')
+    log.warning(
+        'The profile has not been provided, defaulting to DEV profile...')
     profile_config_file = DEV_PROFILE_CONFIG_FILE
 
 config = dotenv_values(profile_config_file)
@@ -77,7 +79,8 @@ def context(deser_function, check_auth=True):
 @app.route(ENDPOINT_PATH, methods=['POST'])
 @context(deserialize)
 def check_url_safety(url_safety_request: UrlSafetyRequest):
-    log.info(f'Received a request to check the safety of the url - {url_safety_request}')
+    log.info(
+        f'Received a request to check the safety of the url - {url_safety_request}')
     return url_checker.check_url(url_safety_request.url).to_dict(), 200
 
 
@@ -91,4 +94,4 @@ def handle_error(error):
 
 
 if __name__ == '__main__':
-    app.run(port=PORT)
+    app.run(port=PORT, host='0.0.0.0')

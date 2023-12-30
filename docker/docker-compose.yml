@@ -36,10 +36,8 @@ services:
 
   url-checker:
     image: ${GROUP_ID}/url-checker:1.0
-    volumes:
-      - .:/usr/src/url-checker/
     ports:
-      - 9095:9095
+      - "9095:9095"
     networks:
       - ${GLOBAL_NETWORK:-services}
 
@@ -77,7 +75,6 @@ services:
       - url-shortener
     networks:
       - ${GLOBAL_NETWORK:-services}
-
 networks:
   postgres:
     driver: bridge
