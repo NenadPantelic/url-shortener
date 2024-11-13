@@ -1,12 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 
+# make sure the version of your driver is compatible with your browser
 from chromedriver_py import binary_path
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 from time import sleep
-from tests.config import config
+from config import config
 from assertpy import assert_that
 
 FRONTEND_URL = config['fe.endpoint']

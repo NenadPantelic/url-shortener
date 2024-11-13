@@ -41,6 +41,7 @@ public class URLShortenerServiceImpl implements URLShortenerService {
 
         final String longUrl = urlShortenerRequest.url();
         URLSafetyReport urlSafetyReport = urlCheckerClient.checkUrlSafety(longUrl);
+        urlCheckerClient.checkUrlSafety(longUrl);
 
         final long id = idGenerator.getNext();
         final String shortenedUrlIdentifier = URLBase62Converter.convert(id);

@@ -9,5 +9,3 @@ Steps (run it under `url-shortener` folder)
 ```
 
 **Note**: Postgres database must be active before running the server (see `application.propeties` for the database requirements - which database and the user credentials).
-
-This project has been created as a demo of URL shortener.

@@ -1,5 +1,5 @@
-from tests.config import config
-from requests import post, get, Response
+from config import config
+from requests import post, get
 from assertpy import assert_that
 
 API_ENDPOINT = config['api.endpoint']
