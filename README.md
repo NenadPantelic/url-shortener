@@ -18,4 +18,7 @@ docker compose up -d
 
 Another option would be to run the servers natively. You can check READMEs of every component to check how to do that.
 
-**Note**: this is a simple url-shortener used to demonstrate some concept of the software development and is used a demo project for the course _Design of the information systems and databases_ at the University of Kragujevac (Faculty of Engineering).
+**Note**: this is a simple url-shortener used to demonstrate some concept of the software development and is used a demo project for the course _Design of the information systems and databases_ at the University of Kragujevac (Faculty of Engineering)
+
+
+Test.
